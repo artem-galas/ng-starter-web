@@ -1,4 +1,4 @@
-# AgStarterWeb
+# NgStarterWeb
 
 Starter project for Angular application.
 

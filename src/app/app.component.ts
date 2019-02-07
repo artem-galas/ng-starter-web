@@ -8,8 +8,6 @@ import { I18NService } from '~/framework';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ag-starter-web';
-
   constructor(private readonly i18n: I18NService) {}
 
   ngOnInit(): void {
