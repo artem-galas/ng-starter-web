@@ -1,27 +1,56 @@
 # AgStarterWeb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
+Starter project for Angular application.
+
+## Get Started
+- clone repo
+- open folder
+- yarn
+- yarn start
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Project architecture
+- `+lazy-module` - some LAZY module (attn to the `+` prefix for lazy-loaded modules)
+- `framework` - it contains the modules which are obligatory for the app:
+    - `core` - it contains the main modules required for lazyLoading the modules
+      - `base.component.ts` - component which included `ngUnsubscribe`. So you dont need carry about it, just extend you class eg. 
+      ```
+      export class DashboardIndexComponent extends BaseComponent {
+        constructor() {
+            super()
+        }
+      }
+      ``` 
+      - `base.service.ts` - service which included `http` and `apiUrl` variable. Just extend you service eg.
+      ```
+      export class MyService exteds BaseService {
+        myMethod() {
+            this.http.get(`${this.apiUrl}/posts`);
+        }
+      }
+      ```
+    - `http` - interceptors
+    - `i18n` - translation (@ngx-translate)
+    - `material` - all necessary material modules
+- `layout` - basic layout component such as `header` and `slidenav-menu`    
+- `shared`
+    - `models` - it contains the modules for all entities used in the project. Do not forget to update `index.ts` when you add a new file.
+    - `services` - it contains the services used in more than one module.
+    - `components` - it contains the components used in mire than one module.
+- `store` - contain all necessary modules/actions/reducers/effects for store    
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Project paths
+The custom paths are used in the project because we want to avoid the usage of `../..` for example:
 
-## Running unit tests
+- import something from `framework` you need to write `import ~framework/material/material.module`;
+- import something from `shared` you need to write `import ~shared/models/user.model`;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Project Layout
+We use [Flex Layout](https://github.com/angular/flex-layout/wiki) for grid and [Angular Material](https://material.angular.io/) for component style.
