@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { I18NService } from '~/framework';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ag-starter-web';
+
+  constructor(private readonly i18n: I18NService) {}
+
+  ngOnInit(): void {
+    this.i18n.init();
+  }
 }

@@ -1,0 +1,21 @@
+<mat-list>
+  <div class="group">
+    <mat-list-item>
+      Ag Starter Web App
+    </mat-list-item>
+  </div>
+  <div class="group">
+    <mat-list-item [routerLink]="['dashboard']" routerLinkActive="active">
+      <mat-icon>home</mat-icon>{{ 'dashboard' | translate }}
+    </mat-list-item>
+  </div>
+  <div class="group">
+
+  </div>
+  <div class="spacer"></div>
+  <div class="group">
+    <mat-list-item>
+      <mat-icon>settings</mat-icon>{{ 'settings' | translate }}
+    </mat-list-item>
+  </div>
+</mat-list>

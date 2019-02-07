@@ -1,0 +1,16 @@
+<header>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button class="material-drawer-button" (click)="slidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="spacer"></span>
+      <mat-icon class="icon pointer" [matMenuTriggerFor]="menu">person</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          {{ 'sign_out' | translate }} <mat-icon class="icon pointer">exit_to_app</mat-icon>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

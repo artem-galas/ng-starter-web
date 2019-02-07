@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
+import { Location } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule, HAMMER_GESTURE_CONFIG, HammerGestureConfig } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient } from '@angular/common/http';
 import { MatNativeDateModule } from '@angular/material';
 
 import { TranslateLoader } from '@ngx-translate/core';
@@ -10,6 +11,8 @@ import { HttpInterceptorModule, I18NModule, MaterialModule, SharedModule, transl
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { SidenavMenuComponent } from './layout/sidenav-menu/sidenav-menu.component';
 
 export class HammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -20,13 +23,16 @@ export class HammerConfig extends HammerGestureConfig {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SidenavMenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    AppRoutingModule,
+    HttpClientModule,
     MaterialModule,
     MatNativeDateModule,
     HttpInterceptorModule,

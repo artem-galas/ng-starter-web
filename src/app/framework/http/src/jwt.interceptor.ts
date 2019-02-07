@@ -3,7 +3,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 
 import { Observable } from 'rxjs';
 
-import { TokenService } from '~/shared/services';
+import { TokenService } from '~/library/services';
 
 /**
  * JwtInterceptor

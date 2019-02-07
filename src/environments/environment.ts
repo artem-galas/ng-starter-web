@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://your-api.com'
+  apiUrl: 'http://your-api.com',
+  token: 'auth_token'
 };
 
 /*
