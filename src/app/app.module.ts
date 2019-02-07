@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SidenavMenuComponent } from './layout/sidenav-menu/sidenav-menu.component';
+import { StoreModule } from '~/store/store.module';
 
 export class HammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -43,6 +44,7 @@ export class HammerConfig extends HammerGestureConfig {
         deps: [HttpClient, Location]
       }
     ]),
+    StoreModule.forRoot()
   ],
   providers: [
     {
