@@ -128,12 +128,12 @@
       "check-preblock"
     ],
     "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
+    "no-inputs-metadata-property": true,
+    "no-outputs-metadata-property": true,
+    "no-host-metadata-property": true,
     "no-input-rename": true,
     "no-output-rename": true,
-    "use-life-cycle-interface": true,
+    "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": [
       true,
@@ -176,7 +176,7 @@
       }
     ],
     "file-name-casing": [true, "kebab-case"],
-    "i18n": [
+    "template-i18n": [
       true,
       "check-id",
       "check-text"

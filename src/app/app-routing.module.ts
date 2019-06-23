@@ -9,15 +9,15 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: './+auth/auth.module#AuthModule'
+    loadChildren: () => import('./+auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'home',
-    loadChildren: './+home/home.module#HomeModule'
+    loadChildren: () => import('./+home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'dashboard',
-    loadChildren: './+dashboard/dashboard.module#DashboardModule'
+    loadChildren: () => import('./+dashboard/dashboard.module').then(m => m.DashboardModule)
   },
 ];
 
