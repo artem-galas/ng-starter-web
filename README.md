@@ -38,7 +38,7 @@ Run `ng generate component component-name` to generate a new component. You can 
       ```
     - `http` - interceptors
     - `i18n` - translation (@ngx-translate)
-    - `material` - all necessary material modules
+    - `material` - all commonly used material modules
 - `layout` - basic layout component such as `header` and `slidenav-menu`    
 - `shared`
     - `models` - it contains the modules for all entities used in the project. Do not forget to update `index.ts` when you add a new file.

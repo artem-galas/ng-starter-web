@@ -9,11 +9,11 @@ import { TranslateLoader } from '@ngx-translate/core';
 
 import { HttpInterceptorModule, I18NModule, MaterialModule, SharedModule, translateFactory } from '~/framework';
 
+import { StoreModule } from '~/store/store.module';
+import { LayoutModule } from '~/layout/layout.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { SidenavMenuComponent } from './layout/sidenav-menu/sidenav-menu.component';
-import { StoreModule } from '~/store/store.module';
 
 export class HammerConfig extends HammerGestureConfig {
   overrides = <any> {
@@ -24,9 +24,7 @@ export class HammerConfig extends HammerGestureConfig {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    SidenavMenuComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +34,7 @@ export class HammerConfig extends HammerGestureConfig {
     HttpClientModule,
     MaterialModule,
     MatNativeDateModule,
+    LayoutModule,
     HttpInterceptorModule,
     I18NModule.forRoot([
       {
@@ -50,7 +49,7 @@ export class HammerConfig extends HammerGestureConfig {
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: HammerConfig
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })
