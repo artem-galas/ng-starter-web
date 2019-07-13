@@ -331,6 +331,11 @@
   resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-8.0.1.tgz#e943e24497729ac4a21041a35cf983f63a17d4fa"
   integrity sha512-ItgyqjPtjpUmMRKe48pyBMzrntimJwImttxqRa0uMWooPGIJB6zAmbgjn2AtyUqX63IRl8BGT8V3pJ4FLrxIow==
 
+"@ngrx/schematics@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-8.0.1.tgz#d6655eb045ff79fcf891062b7fc00115ca7543da"
+  integrity sha512-BnHYRHkzAqXKDRQW5WZoSOwxJkHmwsd/bEJ5wRinplVRSUJY0BYgCVe1by1hj37/FAsRH5E6WBtoOgUyn0i/MQ==
+
 "@ngrx/store-devtools@^8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.0.1.tgz#4c4e5458994afe3eaa487375e13a9c60edc3a84e"

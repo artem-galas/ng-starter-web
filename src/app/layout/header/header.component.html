@@ -7,9 +7,22 @@
       <span class="spacer"></span>
       <mat-icon class="icon pointer" [matMenuTriggerFor]="menu">person</mat-icon>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          {{ 'sign_out' | translate }} <mat-icon class="icon pointer">exit_to_app</mat-icon>
-        </button>
+        <ng-container *ngIf="currentUser$ | async; else noAuth">
+          <button mat-menu-item>
+            {{ 'profile' | translate }} <mat-icon class="icon pointer">person_outline</mat-icon>
+          </button>
+          <button mat-menu-item>
+            {{ 'sign_out' | translate }} <mat-icon class="icon pointer">exit_to_app</mat-icon>
+          </button>
+        </ng-container>
+        <ng-template #noAuth>
+          <button mat-menu-item>
+            {{ 'sign_in' | translate }} <mat-icon class="icon pointer">get_app</mat-icon>
+          </button>
+          <button mat-menu-item>
+            {{ 'sing_up' | translate }} <mat-icon class="icon pointer">person_add</mat-icon>
+          </button>
+        </ng-template>
       </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>

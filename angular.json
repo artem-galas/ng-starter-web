@@ -147,5 +147,8 @@
       }
     }
   },
-  "defaultProject": "ag-starter-web"
+  "defaultProject": "ag-starter-web",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

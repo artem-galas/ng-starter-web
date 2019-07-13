@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
 
-import { BaseService } from '~/framework/core/src/base.service';
+import { BaseService } from '~/framework';
 
 /**
  * TokenService
